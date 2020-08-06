@@ -20,9 +20,10 @@ You will need the following to complete this coding challenge:
 <a name="setup"></a>
 ## Setup
 
-1. Fork this repo.
-2. Using Visual Studio, create a Web API project and add it to your fork of this
-   repo.
+1. Using Visual Studio, create a Web API project.  You may choose to use either
+   .NET Framework 4.7 or above, .NET Core 2.1, or .NET Core 3.1.
+2. Optionally, add your project to a Git repo.  Although this is not required,
+   it is our preferred method to review your code.
 3. Using SQL Server, run the `db_scripts\create_tea_test_db.sql` script.  This script will create the `School` database, set up the schema shown below, and populate it with test data.
 
 ![school-db-schema](readme_assets/db_schema.png)
@@ -33,13 +34,14 @@ You will need the following to complete this coding challenge:
 Add an endpoint to retrieve a student's transcript given the ID of the student:
 
 ```
-GET /transcript/{studentId}
+GET /student/{studentId}/transcript
 ```
 
 1. If the ID provided does not exist or is not for a student, return the appropriate HTTP status code.
 2. The endpoint should return the JSON shown below.
 3. Do not include `NULL` grades.
-4. Calculate the GPA in C# code.
+4. The GPA is not stored in the database, so it must be calculated.  For this
+   challenge, calculate the GPA in C# code.
 
 ```
 {
@@ -73,8 +75,9 @@ Add an endpoint to return a list of students and their GPAs.
 GET /students
 ```
 
-The endpoint
-should return JSON similar to that shown below.
+1. The endpoint should return JSON similar to that shown below.
+2. There are no restrictions on where the GPA is calculated.  Include a comment in
+   your code to justify your approach to calculating the GPA.
 
 ```
 [
@@ -103,12 +106,13 @@ should return JSON similar to that shown below.
 <a name="challenge-3"></a>
 ## Challenge 3
 
-Modify the `StudentGrade` table to enforce the following rules:
+Assuming the database is currently in use, how would you 
+modify the `StudentGrade` table to enforce the following rules?
 
 1. If not `NULL`, `Grade` must be a value between `0.00` and `4.00` inclusive.
 2. The combination of `CourseID` and `StudentID` must be unique.
 
-Assume the database is currently in use.  Provide a way to update the table that minimizes any service disruption.
+Include any script or code to modify the table in the code that you submit.
 
 <a name="challenge-4"></a>
 ## Challenge 4
@@ -145,5 +149,8 @@ If the request succeeds, it will return the following JSON:
 <a name="submission"></a>
 ## Submission
 
-1. Push your changes to your fork and make it available to us.
-2. Include any instructions to run your code, especially for Challenge 3.
+1. Make your solution available to us, ideally in a public Git repository.  You
+   may also try to email a zipped copy of your solution, but there is a
+   chance this will be blocked.  In that case, be prepared to use another
+   method, such as Dropbox or Google Drive.
+2. Include any special instructions to run your code.
