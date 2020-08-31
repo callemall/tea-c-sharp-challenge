@@ -34,7 +34,7 @@ You will need the following to complete this coding challenge:
 Add an endpoint to retrieve a student's transcript given the ID of the student:
 
 ```
-GET /student/{studentId}/transcript
+GET /students/{studentId}/transcript
 ```
 
 1. If the ID provided does not exist or is not for a student, return the appropriate HTTP status code.
