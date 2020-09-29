@@ -106,17 +106,6 @@ GET /students
 <a name="challenge-3"></a>
 ## Challenge 3
 
-Assuming the database is currently in use, how would you 
-modify the `StudentGrade` table to enforce the following rules?
-
-1. If not `NULL`, `Grade` must be a value between `0.00` and `4.00` inclusive.
-2. The combination of `CourseID` and `StudentID` must be unique.
-
-Include any script or code to modify the table in the code that you submit.
-
-<a name="challenge-4"></a>
-## Challenge 4
-
 Add an endpoint to insert a student grade:
 
 ```
@@ -146,6 +135,31 @@ If the request succeeds, it will return the following JSON:
 }
 ```
  
+<a name="challenge-4"></a>
+## Challenge 4
+
+This challenge is unrelated to the School database or API, but should be
+included in the same solution.
+
+Create a class named `Challenge4` with the following method named
+`MaxDistance`:  
+
+```
+public class Challenge4
+{
+   public int MaxDistance(string input)
+   {
+       throw new NotImplementedException();
+   }
+}
+```
+
+Implement `MaxDistance` to return the maximum distance for a pair of letters in the string `input`.  The maximum distance is defined as the largest difference between any `input[i]` and `input[j]` where `i < j` and `input[i]` comes before `input[j]` in the alphabet. 
+
+* Sample Input = `"gbcjbdha"`
+* Sample Output = 7
+* Explanation: There are 7 letters between `'b'` and `'j'` AND `'b'` comes before `'j'` alphabetically AND index of `'j'` > index of `'b'`
+
 <a name="submission"></a>
 ## Submission
 
