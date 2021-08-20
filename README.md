@@ -37,6 +37,7 @@ GET /students
 
 1. The endpoint should return JSON similar to that shown below.
 2. The GPA is not stored in the database, so it must be calculated.
+3. Ignore `null` grades when calculating the GPA.
 
 ```
 [
