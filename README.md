@@ -12,14 +12,13 @@
 
 You will need the following to complete this coding challenge:
 
-1. Visual Studio 2019 or later
+1. Visual Studio, or any IDE that can be used for C#/.NET development
 2. SQL Server 2016 or later (any edition)
 
 <a name="setup"></a>
 ## Setup
 
-1. Using Visual Studio, create a Web API project.  You may choose to use either
-   .NET Framework 4.7 or above or .NET Core/.NET 6.
+1. Using Visual Studio, create a Web API project using .NET 6 or 7 (the latest versions of .NET at this time).
 2. Optionally, add your project to a Git repo.  Although this is not required,
    it is our preferred method to review your code.  *Note:  Please do not attempt to add your code to this repo (through a fork or PR) as this would make your solution visible to others.*
 3. Using SQL Server, run the `db_scripts\create_tea_test_db.sql` script.  This script will create the `School` database, set up the schema shown below, and populate it with test data.
