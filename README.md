@@ -18,7 +18,7 @@ You will need the following to complete this coding challenge:
 <a name="setup"></a>
 ## Setup
 
-1. Using Visual Studio, create a Web API project using .NET 6 or 7 (the latest versions of .NET at this time).
+1. Using Visual Studio, create a Web API project using any version of .NET (not .NET Framework) that is still under support.
 2. Optionally, add your project to a Git repo.  Although this is not required,
    it is our preferred method to review your code.  *Note:  Please do not attempt to add your code to this repo (through a fork or PR) as this would make your solution visible to others.*
 3. Using SQL Server, run the `db_scripts\create_tea_test_db.sql` script.  This script will create the `School` database, set up the schema shown below, and populate it with test data.
